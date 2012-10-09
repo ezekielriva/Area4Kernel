@@ -13,3 +13,6 @@ web/js/*
 
 # Configuration files
 app/config/parameters.ini
+
+# Sublime Text
+*.sublime*
