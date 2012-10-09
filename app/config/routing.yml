@@ -1,3 +1,8 @@
+area4_product:
+    resource: "@Area4ProductBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 area4_admin:
     resource: "@Area4AdminBundle/Controller/"
     type:     annotation

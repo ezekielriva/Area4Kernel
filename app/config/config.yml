@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: @Area4NewsBundle/Resources/config/services.yml }
+    - { resource: @Area4ProductBundle/Resources/config/services.yml }
 
 framework:
     #esi:             ~
@@ -106,6 +107,9 @@ sonata_admin:
                     items: ~
             area4_page:
                     label: Páginas del Sitio
+                    items: ~
+            area4_product:
+                    label: Manejo de Productos
                     items: ~
 
 #Stfalcon - TinyMCE

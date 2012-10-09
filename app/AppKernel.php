@@ -38,6 +38,7 @@ class AppKernel extends Kernel
             new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
             
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
+            new Area4\Bundle\ProductBundle\Area4ProductBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
