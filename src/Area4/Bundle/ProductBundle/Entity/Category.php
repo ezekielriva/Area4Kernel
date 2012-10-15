@@ -29,11 +29,18 @@ class Category
     private $name;
 
     /**
+     * @var Product $product
+     *
+     * @ORM\OneToMany(targetEntity="Product", mappedBy="category")
+     **/
+    private $product;
+
+    /**
      * toString
      * 
      * @return string
      * @author ezekiel
-     **/
+     */
     public function __toString()
     {
         return $this->name;

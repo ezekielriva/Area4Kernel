@@ -1,10 +1,10 @@
-area4_product:
-    resource: "@Area4ProductBundle/Controller/"
+area4_contable:
+    resource: "@Area4ContableBundle/Controller/"
     type:     annotation
     prefix:   /
 
-area4_admin:
-    resource: "@Area4AdminBundle/Controller/"
+area4_product:
+    resource: "@Area4ProductBundle/Controller/"
     type:     annotation
     prefix:   /
 

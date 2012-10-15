@@ -44,9 +44,8 @@ class Product
     /**
      * @var Category $category
      *
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="category")
-     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
-     **/
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="product")
+     */
     private $category;
 
     /**
@@ -149,5 +148,16 @@ class Product
     public function getCategory()
     {
         return $this->category;
+    }
+
+    /**
+     * toString
+     *
+     * @return string
+     * @author ezekiel
+     **/
+    public function __toString()
+    {
+        return $this->name;
     }
 }

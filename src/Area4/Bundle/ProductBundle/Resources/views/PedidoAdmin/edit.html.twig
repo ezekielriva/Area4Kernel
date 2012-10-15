@@ -1,0 +1,46 @@
+{% extends 'SonataAdminBundle:CRUD:base_edit.html.twig' %}
+
+{% use 'SonataAdminBundle:CRUD:base_edit_form.html.twig' with form as parentForm %}
+
+{% block form %}
+    {{ block('parentForm') }}
+
+    {% block sonata_post_fieldsets %}
+        <div id="formOrderLine"></div>
+        <div id="formOrderLineList"></div>
+    {% endblock %}
+
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript">
+formOrderLine();
+loadList();
+
+function formOrderLine () {
+    var OrderLine = $.ajax({
+        type: 'GET',
+        url: "{{ path('admin_bundle_product_orderline_createAjax', {'id':object.id}) }}"
+    })
+    OrderLine.done(function (data) {
+        $('#formOrderLine').html(data);
+    })
+}
+
+function loadList() {
+    var OrderLineList = $.ajax({
+        type: 'GET',
+        url: "{{ path('admin_bundle_product_orderline_listAjax', {'filter[pedido][value]':object.id}) }}"
+    })
+    OrderLineList.done(function (data) {
+        $('#formOrderLineList').html(data);
+    })    
+}
+
+
+
+
+
+</script>
+{% endblock %}
