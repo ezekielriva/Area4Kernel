@@ -1,0 +1,23 @@
+services:
+    area4.product.admin.product:
+        class: Area4\Bundle\ProductBundle\Admin\ProductAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: area4_product, label: Productos }
+        arguments: [null, Area4\Bundle\ProductBundle\Entity\Product, Area4ProductBundle:ProductAdmin]
+        calls:
+            - [setTranslationDomain, [Area4ProductBundle]]
+    area4.product.admin.category:
+        class: Area4\Bundle\ProductBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: area4_product, label: Categorias }
+        arguments: [null, Area4\Bundle\ProductBundle\Entity\Category, Area4ProductBundle:CategoryAdmin]
+    area4.product.admin.order:
+        class: Area4\Bundle\ProductBundle\Admin\PedidoAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: area4_product, label: Pedido }
+        arguments: [null, Area4\Bundle\ProductBundle\Entity\Pedido, Area4ProductBundle:PedidoAdmin]
+    area4.product.admin.order.line:
+        class: Area4\Bundle\ProductBundle\Admin\OrderLineAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: area4_product, label: Linea de Pedido }
+        arguments: [null, Area4\Bundle\ProductBundle\Entity\OrderLine, Area4ProductBundle:OrderLineAdmin]

@@ -1,6 +1,6 @@
 <?php
 
-namespace Area4\Bundle\AdminBundle\DependencyInjection;
+namespace Area4\Bundle\ContableBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class Area4AdminExtension extends Extension
+class Area4ContableExtension extends Extension
 {
     /**
      * {@inheritDoc}

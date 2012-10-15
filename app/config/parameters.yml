@@ -4,7 +4,7 @@ parameters:
     database_driver:   pdo_mysql
     database_host:     localhost
     database_port:     ~
-    database_name:     Setimio
+    database_name:     Area4Kernel
     database_user:     root
     database_password: root
 

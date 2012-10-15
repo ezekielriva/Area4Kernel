@@ -6,11 +6,11 @@
 
     <!--
     <parameters>
-        <parameter key="area4_admin.example.class">Area4\Bundle\AdminBundle\Example</parameter>
+        <parameter key="area4_product.example.class">Area4\Bundle\ProductBundle\Example</parameter>
     </parameters>
 
     <services>
-        <service id="area4_admin.example" class="%area4_admin.example.class%">
+        <service id="area4_product.example" class="%area4_product.example.class%">
             <argument type="service" id="service_id" />
             <argument>plain_value</argument>
             <argument>%parameter_name%</argument>

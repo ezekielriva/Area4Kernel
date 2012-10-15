@@ -1,6 +1,6 @@
 <?php
 
-namespace Area4\Bundle\AdminBundle\DependencyInjection;
+namespace Area4\Bundle\ContableBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('area4_admin');
+        $rootNode = $treeBuilder->root('area4_contable');
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for
